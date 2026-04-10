@@ -1,55 +1,56 @@
-# Problem: Salary Adjustment System (Using switch in JavaScript)
+# Problem: Gym Membership Payment Calculator (Using switch in JavaScript)
 
 ## Introduction
 
-In many real-world systems, programs must apply different calculations depending 
-on a selected numeric option. A common way to organize this type of logic is by 
-using a **`switch` statement**.
+Many programs must apply different calculations depending on a selected category. 
+A common way to implement this type of logic in JavaScript is by using a 
+**`switch` statement**.
 
-In this exercise, you will build a small program in **JavaScript** that calculates 
-an employee's **new salary after a percentage adjustment**. The adjustment depends 
-on a **numeric code representing the employee category**.
+In this exercise, you will create a small program that calculates the 
+**total cost of a gym membership** depending on the **type of membership plan**
+selected.
 
-The program already defines the required variables, and your task is to implement 
-the decision logic using a **`switch` statement**.
+Each membership plan has a **different monthly price**, and the program must 
+calculate the **total payment based on the number of months**.
 
-This exercise helps you practice:
+This exercise will help you practice:
 
-- Using **`switch` with numeric options**
-- Performing **mathematical calculations**
-- Writing **clean conditional logic**
+- Using **`switch` statements with numeric cases**
+- Applying **basic multiplication operations**
+- Writing **structured decision logic**
 
 ---
 
 ## Problem Description
 
-A company adjusts employee salaries depending on their **category code**.
+A gym offers different membership plans. Each plan has a different **monthly cost**.
 
-Each category applies a **different percentage increase** to the base salary.
+Your program must calculate the **total membership cost** based on the selected 
+**plan code** and the **number of months**.
 
-### Category Codes
+### Membership Plans
 
-| Code | Category | Salary Increase |
-|-----|----------|----------------|
-| 1 | Junior | 5% increase |
-| 2 | Mid-level | 10% increase |
-| 3 | Senior | 15% increase |
-| 4 | Lead | 20% increase |
+| Code | Plan | Monthly Cost |
+|-----|------|--------------|
+| 1 | Basic | $25 |
+| 2 | Standard | $40 |
+| 3 | Premium | $60 |
+| 4 | VIP | $90 |
 
-If the category code does **not match any valid option**, the program should 
-display an error message.
+If the plan code does **not match any valid option**, the program should display 
+an error message.
 
 ---
 
 ## Given Variables
 
 ```javascript
-const salary = 2000;
-const category = 3;
+const months = 6;
+const plan = 3;
 ```
 
-- `salary` → employee's current salary
-- `category` → numeric code representing the employee category
+- `months` → number of months the membership will last
+- `plan` → numeric code representing the membership plan
 
 ---
 
@@ -57,10 +58,11 @@ const category = 3;
 
 Your program must:
 
-1. Use a switch statement based on the category variable.
-2. Calculate the new salary after the percentage increase.
-3. Print the new salary using `console.log()`.
-4. Handle invalid category codes using the default case.
+Use a switch statement based on plan.
+Determine the monthly cost.
+Calculate the total membership payment.
+Print the result using console.log().
+Handle invalid codes using the default case.
 
 ---
 
@@ -69,29 +71,24 @@ Your program must:
 If:
 
 ```
-salary = 2000
-category = 3
+months = 6
+plan = 3
 ```
 
-> The salary increase is 15%.
+> Monthly cost = $60
 
-```
-2000 + (2000 * 0.15) = 2300
-
-```
+**6 * 60 = 360**
 
 **Output:**
 
-```
-New Salary: 2300
-```
+Total Membership Cost: $360 USD
 
 ---
 
 ## Requirements
 
 - Use a switch statement
-- Do not use `if / else`
+- Do not use if / else
 - Do not request CLI input
-- The category must be selected only by the numeric code
+- The plan must be selected only by the numeric code
 - Print the result with `console.log()`
